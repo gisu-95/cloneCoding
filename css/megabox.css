@@ -1,4 +1,41 @@
+
 *{
   margin: 0px;
   padding:0px;
+}
+body{
+  display: flex;
+  justify-content: center;
+}
+.main-header{
+  background-color: #181818;
+  height: 91px;
+  width: 1100px;
+}
+.left-top{
+  margin-top: 15px;
+  font-size: 13.0005px;
+  width: 215.09px;
+  height: 20px;
+  display: flex;
+  color: #888;
+  font-family: NanumBarunGothic, Dotum, '돋움', sans-serif;
+}
+.vip{
+
+  margin-right: 20px;
+  height: fit-content;
+  width: fit-content;
+}
+.멤버십{
+
+  width: fit-content;
+  height: fit-content;
+    margin-right: 20px;
+}
+.고객센터{
+
+      width:fit-content;
+      height: fit-content;
+    margin-right: 10px;
 }
