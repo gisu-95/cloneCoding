@@ -18,7 +18,7 @@ header{
   height: 100%;
   object-fit: cover; /*이미지가 범위를 초과하면 그냥 잘리고 범위가 유지됨*/
   object-position: center;
-  filter : blur(15px) brightness(10%); /*배경이미지 흐릿하고 어둡게하는 효과*/
+  filter : blur(15px) brightness(15%); /*배경이미지 흐릿하고 어둡게하는 효과*/
   z-index: 1;
 }
 .inner {
@@ -178,6 +178,7 @@ header{
 .nav-inner{
   width: 100%;
   max-width: 1100px;
+  min-width: 1100px;
   justify-content: left;
   margin: 0 auto;
   display: flex;
@@ -196,14 +197,14 @@ header{
   margin-left: 730px;
 }
 #header-centerbox .inner{
-  border: 1px solid white;
+  /* border: 1px solid white; */
   margin-top: 90px;
   justify-content: center;
   display: flex;
   flex-direction: column;
 }
 .header-textbox-boxoffice{
-  border: 1px solid white;
+  /* border: 1px solid white; */
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -232,4 +233,90 @@ header{
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+.header-movieposter-btn{
+  /* border: 1px solid white; */
+  display: flex;
+  width: 100%;
+  height: 36px;
+  justify-content: space-between;
+}
+.header-movieposter-btn-box{
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 245px;
+  height: 36px;
+  margin-top: 5px;
+  justify-content: space-between;
+}
+.btn-like{
+  background-color: rgba(0, 0, 0, 0.3);  
+  color: white;
+  width: 80px;
+  height: 100%;
+  cursor: pointer;
+}
+.btn-yeme{
+  width: 160px;
+  height: 100%;
+  background-color: #037b94;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+#header-mid-menu-box{
+  display: flex;
+  width: 100%;
+  padding: 23px 0 23px;
+  margin: 50px;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.3);
+
+}
+.header-mid-menu1, .header-mid-menu2, .header-mid-menu3{
+  /* border: 1px solid white; */
+  width: 275px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+    justify-content: center;
+}
+.header-mid-menu4{
+  /* border: 1px solid white; */
+  width: 275px;
+    justify-content: center;
+}
+.header-mid-menu2, .header-mid-menu3, .header-mid-menu4{
+  display: flex;
+}
+.header-mid-menu2 a, .header-mid-menu3 a, .header-mid-menu4 a{
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+}
+#moviesearch{
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: white;
+}
+.input-text{
+  padding: 0 5px;
+  vertical-align: middle;
+  font-family: sans-serif;
+  font-size: 15px
+}
+.ico-boxoffice-main, .quick-reserve-main, .ico-schedule-main{
+  margin-right: 7px;
+}
+img{
+    vertical-align: middle;
+}
+.header-bottom-mouse-box{
+  /* border: 1px solid white; */
+  position: absolute;
+  width: 100%;
+  padding-left: 49.5%;
+  justify-content: center;
+  bottom: 180px;
 }
