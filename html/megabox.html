@@ -7,15 +7,101 @@
   <link rel="stylesheet" href="./../css/megabox.css">  
 </head>
 <body>
-  <header class="main-header">
-      <div class="left-top">
-        <div class="vip">VIP LOUNGE</div>
-        <div class="멤버십">멤버십</div>
-        <div class="고객센터">고객센터</div>
+  <header>
+    <img id="bgimg" src="./../img/헤더배경.jpg" alt="배경사진">
+      <div id="header-headerbox">
+        <div class="inner">
+          <div id="header-top-left">
+            <a class="top-left-list" href="#">VIP LOUNGE</a>
+            <a class="top-left-list" href="#">멤버십</a>
+            <a class="top-left-list" href="#">고객센터</a>
+          </div>
+          <div id="header-top-right">
+            <a class="top-right-list" href="#">로그인</a>
+            <a class="top-right-list" href="#">회원가입</a>
+            <a class="top-right-list" href="#">빠른예매</a>
+          </div>
+        </div>
+
+          <nav id="header-nav">
+            <div class="nav-inner">
+              <div class="header-nav-left">
+                <img class="header-icon-left" src="./../img/ico-sitemap.png" alt="메뉴판">
+                <img class="header-icon-left" src="./../img/ico-search.png" alt="검색">
+                <div class="header-nav-hidemenu">
+                <a href="#">영화</a>
+                <ul class="header-nav-hidemenu-ul">
+                  <div class="nav-inner">
+                  <li><a href="#">전체영화</a></li>
+                  </div>
+                </ul>
+                </div>
+                <div class="header-nav-hidemenu">
+                <a href="#">예매</a>
+                <ul class="header-nav-hidemenu-ul">
+                  <div class="nav-inner">
+                  <li id="fastbooking"><a href="#">빠른예매</a></li>
+                  <li><a href="#">상영시간표</a></li>
+                  <li><a href="#">더 부티크 프라이빗 예매</a></li>
+                  </div>
+                </ul>
+                </div>
+                <div class="header-nav-hidemenu">
+                <a href="#">극장</a>
+                <ul class="header-nav-hidemenu-ul">
+                  <div class="nav-inner">
+                  <li id="wholetheater"><a href="#">전체극장</a></li>
+                  <li><a href="#">특별관</a></li>
+                  </div>
+                </ul>
+                </div>
+              </div>
+                <div class="logo">
+                <img src="./../img/megabox간판.jpg" alt="메가박스로고" class="logo-img">
+                </div>
+              <div class="header-nav-right">
+                <div class="header-nav-hidemenu">
+                <a href="#">이벤트</a>
+                <ul class="header-nav-hidemenu-ul">
+                  <div class="nav-inner">
+                  <li id="ingevent"><a href="#">진행중 이벤트</a></li>
+                  <li><a href="#">지난 이벤트</a></li>
+                  <li><a href="#">당첨자발표</a></li>
+                  </div>
+                </ul>
+                </div>
+                <a href="#">스토어</a>
+                <div class="header-nav-hidemenu">
+                <a href="#">혜택</a>
+                <ul class="header-nav-hidemenu-ul">
+                  <div class="nav-inner">
+                  <li id="membership"><a href="#">메가박스 멤버십</a></li>
+                  <li><a href="#">제휴/할인</a></li>
+                  </div>
+                </ul>
+                </div>
+                <img class="header-icon-right" src="./../img/ico-schedule.png" alt="상영시간표">
+                <img class="header-icon-right" src="./../img/ico-mymega.png" alt="나의 메가박스">        
+              </div>
+            </div>
+          </nav>
       </div>
-
-
-
+      <div id="header-centerbox">
+        <div class="inner">
+          <div class="header-textbox-boxoffice">
+            <a href="#" id="boxoffice">박스오피스</a>
+            <a href="#" id="moremovie">더 많은 영화보기
+              <img src="./../img/ico-more-cross-gray.png" alt="+">
+            </a>
+          </div>
+          <div class="header-movieposter">
+            <img src="./../img/좀비딸.jpg" alt="좀비딸" class="movieposter" width="245px" height="352px">
+            <img src="./../img/f1더무비.jpg" alt="f1더무비" class="movieposter" width="245px" height="352px">
+            <img src="./../img/전독시.jpg" alt="전독시" class="movieposter" width="245px" height="352px">
+            <img src="./../img/판타스틱4.jpg" alt="판타스틱4" class="movieposter" width="245px" height="352px">
+          </div>
+        </div>
+      </div>
   </header>
 </body>
 </html>

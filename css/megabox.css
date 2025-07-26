@@ -1,41 +1,235 @@
 
-*{
+*{/*초기화*/
   margin: 0px;
   padding:0px;
+  box-sizing: border-box;/*이거하면 크기 계산하기 편하다고*/
 }
-body{
-  display: flex;
-  justify-content: center;
-}
-.main-header{
+header{
   background-color: #181818;
-  height: 91px;
-  width: 1100px;
+  width: 100%;
+  display: flex; /*자식 요소가 flex아이템이됨, 정렬이 편해짐*/
+  position: relative; /*자식태그 위치잡아주기용*/
+  flex-direction: column;
+  z-index: 0;
 }
-.left-top{
-  margin-top: 15px;
-  font-size: 13.0005px;
-  width: 215.09px;
-  height: 20px;
+#bgimg{
+  position: absolute; /* 부모태그안에서 위치 잡는용*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*이미지가 범위를 초과하면 그냥 잘리고 범위가 유지됨*/
+  object-position: center;
+  filter : blur(15px) brightness(10%); /*배경이미지 흐릿하고 어둡게하는 효과*/
+  z-index: 1;
+}
+.inner {
+  width: 100%;
+  max-width: 1100px;
+  min-width: 1100px;
+  margin: 0 auto;
   display: flex;
-  color: #888;
+  justify-content: space-between;/*구성요소를 범위 양쪽끝에 정렬*/
+  align-items: center;
+}
+#header-centerbox{
+  position: relative;
+  width: 100%;
+  min-width: 1100px;
+  height: 921.39px;
+  padding-top: 15px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* 구성요소가 범위 내 제일위에서 시작하게 만들어줌*/
+  z-index: 2;
+}
+#header-headerbox{
+  width: 100%; 
+  background-color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 2;
+}
+#header-top-left{
+  /* border: 1px solid white; */
+  font-size: 13.0005px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
   font-family: NanumBarunGothic, Dotum, '돋움', sans-serif;
+  z-index: 4;
 }
-.vip{
-
+.top-left-list{
+    /* border: 1px solid white; */
   margin-right: 20px;
+  margin-top: 15px;
   height: fit-content;
   width: fit-content;
+  color: #888;
+  text-decoration: none;
+   z-index: 4;
 }
-.멤버십{
 
+#header-top-right{
+  /* border: 1px solid white; */
+  font-size: 13.0005px;
   width: fit-content;
   height: fit-content;
-    margin-right: 20px;
+  display: flex;
+  font-family: NanumBarunGothic, Dotum, '돋움', sans-serif;
+   z-index: 4;
 }
-.고객센터{
+.top-right-list{
+    /* border: 1px solid white; */
+  margin-left: 20px;
+  margin-top: 15px;
+  height: fit-content;
+  width: fit-content;
+  color: #888;
+  text-decoration: none;
+  z-index: 4;
+}
 
-      width:fit-content;
-      height: fit-content;
-    margin-right: 10px;
+.top-left-list:hover{
+  text-decoration: underline;
+}
+.top-right-list:hover{
+  text-decoration: underline;
+}
+#header-nav .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header-nav {
+  justify-content: space-between;
+  align-items: center; /* 교차축상에서 정렬, justify-content는 메인축상에서 정렬*/
+  z-index: 2;
+}
+.logo{
+  flex: none;
+  text-align: center;
+}
+.header-nav-left, .header-nav-right{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  cursor: pointer; /*마우스 올리면 마우스모양 누르는 모양으로 바뀜*/
+
+}
+.header-nav-left{
+  margin-left: 5px;
+}
+.header-nav-right{
+  margin-right: 5px;
+}
+.header-icon-left, .header-icon-right{
+  vertical-align: middle; /*이미지랑 텍스트가 같은줄에 있을 때, 줄가운데 높이에 맞춰줌, 높이정렬이 깔끔해짐*/
+}
+.header-nav-left a, .header-nav-right a{
+  color: white;
+  text-decoration: none;
+  margin: 0px 30px;
+  font-size: 17px;
+}
+.header-nav-left a:hover, .header-nav-right a:hover{
+  border-bottom: 3px solid white;
+}
+.header-nav-left img, .header-nav-right img{
+  margin: 0px 10px;
+  filter: brightness(400%);
+}
+.header-nav-left img[alt="검색"]{
+  margin-right: 70px;
+}
+
+#header-nav .inner{
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.header-nav-right img[alt="상영시간표"]{
+  margin-left: 48px;
+}
+.header-nav-right{
+  justify-content: flex-end;
+}
+.header-nav-hidemenu{
+  display: inline-block; /*인라인처럼 한줄에 배치되지만 블록처럼 width, height 적용 가능*/
+}
+.header-nav-hidemenu-ul{
+  /* border: 1px solid white; */
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  background: rgba(0,0,0,0.25);
+}
+.header-nav-hidemenu:hover .header-nav-hidemenu-ul {
+  display: block;
+}
+.header-nav-hidemenu:hover .header-nav-hidemenu-ul li{
+  /* border: 1px solid yellow;   */
+  margin-top: 5px;
+}
+.nav-inner{
+  width: 100%;
+  max-width: 1100px;
+  justify-content: left;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+#fastbooking{
+  margin-left: 166px;
+}
+#wholetheater{
+  margin-left: 280px;
+}
+#ingevent{
+  margin-left: 489px;
+}
+#membership{
+  margin-left: 730px;
+}
+#header-centerbox .inner{
+  border: 1px solid white;
+  margin-top: 90px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.header-textbox-boxoffice{
+  border: 1px solid white;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+}
+#boxoffice{
+  position: absolute;
+  left: 47%;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2.5px solid rgba(255, 255, 255, 0.2);
+}
+#moremovie{
+
+  justify-content: end;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.header-movieposter{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
