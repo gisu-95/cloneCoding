@@ -5,6 +5,7 @@
   box-sizing: border-box;/*이거하면 크기 계산하기 편하다고*/
 }
 header{
+  border: 1px solid white;
   background-color: #181818;
   width: 100%;
   display: flex; /*자식 요소가 flex아이템이됨, 정렬이 편해짐*/
@@ -13,6 +14,7 @@ header{
   z-index: 0;
 }
 #bgimg{
+  border: 1px solid white;
   position: absolute; /* 부모태그안에서 위치 잡는용*/
   width: 100%;
   height: 100%;
@@ -22,6 +24,7 @@ header{
   z-index: 1;
 }
 .inner {
+  /* border: 1px solid white; */
   width: 100%;
   max-width: 1100px;
   min-width: 1100px;
@@ -66,7 +69,7 @@ header{
   width: fit-content;
   color: #888;
   text-decoration: none;
-   z-index: 4;
+  z-index: 4;
 }
 
 #header-top-right{
@@ -96,11 +99,13 @@ header{
   text-decoration: underline;
 }
 #header-nav .inner {
+  /* border: 1px solid white; */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 #header-nav {
+  /* border: 1px solid blue; */
   justify-content: space-between;
   align-items: center; /* 교차축상에서 정렬, justify-content는 메인축상에서 정렬*/
   z-index: 2;
@@ -110,6 +115,7 @@ header{
   text-align: center;
 }
 .header-nav-left, .header-nav-right{
+  /* border: 1px solid yellow; */
   flex: 1;
   display: flex;
   align-items: center;
@@ -176,6 +182,7 @@ header{
   margin-top: 5px;
 }
 .nav-inner{
+  /* border: 1px solid red; */
   width: 100%;
   max-width: 1100px;
   min-width: 1100px;
@@ -229,7 +236,7 @@ header{
   text-decoration: none;
 }
 .header-movieposter img{
-    border-radius: 8px;
+  border-radius: 8px;
 }
 .header-movieposter{
   display: flex;
@@ -267,7 +274,7 @@ header{
 }
 .heart-overflow{
   /* border: 1px solid white; */
-    width: 17px;
+  width: 17px;
   height: 15px;
   overflow: hidden;
   margin-right: 4px;
@@ -302,12 +309,12 @@ header{
   /* border: 1px solid white; */
   width: 275px;
   border-right: 1px solid rgba(255, 255, 255, 0.3);
-    justify-content: center;
+  justify-content: center;
 }
 .header-mid-menu4{
   /* border: 1px solid white; */
   width: 275px;
-    justify-content: center;
+  justify-content: center;
 }
 .header-mid-menu2, .header-mid-menu3, .header-mid-menu4{
   display: flex;
@@ -334,7 +341,7 @@ header{
   margin-right: 7px;
 }
 img{
-    vertical-align: middle;
+  vertical-align: middle;
 }
 .header-bottom-mouse-box{
   /* border: 1px solid white; */
@@ -346,7 +353,7 @@ img{
 }
 .main-mainbox .inner{
   display: flex;
-  flex-direction: column; /* <-- 추가! */
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
@@ -477,8 +484,8 @@ img{
 }
 
 .main-section-bottom ul li img:hover{
-    transform: translateY(-170px) scale(1.1);
-    cursor: pointer;
+  transform: translateY(-170px) scale(1.1);
+  cursor: pointer;
 
 }
 .main-mainbottombox-slidearrow{
@@ -532,7 +539,6 @@ img{
 .main-info-menu ul{
   /* border: 1px solid black; */
   display: flex;
-
   list-style: none;
   width: 1100px;
   justify-content: space-between;
@@ -559,7 +565,7 @@ footer{
   background-color: #f8f8fa;
 }
 footer .inner{
-    display: flex;
+  display: flex;
   flex-direction: column;
 }
 .footer-info{
@@ -581,7 +587,6 @@ footer .inner{
   text-decoration: none;
   font-size: 13px;
   vertical-align: middle;
-
 }
 #footer-search{
   border: 1px solid #d8d9db;
@@ -605,9 +610,9 @@ footer .inner{
   width: 100%;
   vertical-align: middle;
 }
-.footer-logo-img{
-  /* border: 1px solid black; */
-}
+/* .footer-logo-img{
+ border: 1px solid black;
+ }  */
 .footer-comapany-address{
   /* border: 1px solid black; */
   font-size: 13px;
